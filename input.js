@@ -70,13 +70,13 @@ function displayRecords() {
         <b>MEN'S RECORD:</b> <br>9.58 seconds (set by Usain Bolt in 2009)`)
 }
 
-var winWidth = window.innerWidth;
-var winHeight = window.innerHeight;
-var overlay = document.getElementById('overlay');
-var box = document.getElementById('box')
-
 function CustomAlert() {
     this.render = function(dialog) {
+
+        var winWidth = window.innerWidth;
+        var winHeight = window.innerHeight;
+        var overlay = document.getElementById('overlay');
+        var box = document.getElementById('box')
 
         //display box in center
         box.style.display = 'block';
