@@ -1,6 +1,8 @@
 # My Athlete's App
 
-"This repository implements a simple application enabling runners to comapre their running times for the 100 metres running dash with the current world record."
+HTML, JAVASCRIPT, CSS
+
+This repository implements a simple application enabling runners to comapre their running times for the 100 metres running dash with the current world record.
 
 The following files are available: 
 * index.html : HTML file sets the format
