@@ -9,5 +9,5 @@ The following files are available:
 
 To test the application simply open the index.html file in any browser.
 
-![Alt text](screenshots/overview.png "Overview")
+![Alt text](screenshots/overview.PNG "Overview")
 
