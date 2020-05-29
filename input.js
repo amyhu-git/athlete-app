@@ -5,6 +5,7 @@ const standard = 0.1;
 let time
 let reactionTime
 
+//compare input
 function promptInput() {
     //Regular Expression: Remove anything that is not a letter a-z
     let whichEvent = prompt("Are you competing in the MEN'S or WOMEN'S event?").toLowerCase()
@@ -43,6 +44,7 @@ function promptInput() {
                 Alert.render(`Oh Blimey, no new world record has been set today:<br>You've missed it by ${no_femaleRecord} seconds.`);
             };
             break;
+
         case "men":
             let new_maleRecord = (maleRecord - time).toFixed(2);
             let no_maleRecord = (time - maleRecord).toFixed(2);
@@ -63,6 +65,7 @@ function promptInput() {
 
 }
 
+//display current world records
 function displayRecords() {
     Alert.render(
         `Current best times for running the 100 metres dash <br><br>
@@ -70,6 +73,7 @@ function displayRecords() {
         <b>MEN'S RECORD:</b> <br>9.58 seconds (set by Usain Bolt in 2009)`)
 }
 
+//create custom alert box
 function CustomAlert() {
     this.render = function(dialog) {
 

@@ -17,18 +17,10 @@
 </head>
 
 <body>
-    <!-- <div class="container">
-        <div class="center">
-            <button type="button" class="btn btn-primary btn-lg">Start</button>
-        </div>
-    </div> -->
-    <!-- <div>
-        <button id="testbutton"></button>
-    </div> -->
 
-    <!-- <div id="testbutton"></div> -->
     <h2 class="display-4">Ready to set a new World Record?</h2>
 
+    //button to start the prompts
     <div id="container">
         <button class="my-btn" onClick="promptInput()">
             <div class="dots-container">
@@ -41,6 +33,7 @@
             </button>
     </div>
 
+    //custom alert box
     <div id="overlay"></div>
     <div id="box">
         <div>
@@ -49,10 +42,13 @@
             <div id="foot"></div>
         </div>
     </div>
+
+    //button to display current records
     <div Align="center">
         <button type="button" class="btn btn-outline-light" id="world-record-btn" onClick="displayRecords()">Current World Records</button>
     </div>
 
+    //linking js file
     <script src="input.js"></script>
 
 </body>
