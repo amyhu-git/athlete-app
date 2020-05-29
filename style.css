@@ -1,0 +1,364 @@
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    /* margin-bottom: 10px; */
+}
+
+
+/*changing background colour*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+    overflow: hidden;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+
+/*centering container and content*/
+
+#container {
+    width: 100vw;
+    height: 70vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*define button*/
+
+button {
+    background-color: #292929;
+    border: none;
+    padding: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+.my-btn {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+.my-btn span {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+
+.my-btn span:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    border: 7px solid rgba(243, 109, 20, 0.897);
+    box-sizing: border-box;
+    transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+    box-shadow: 0 30px 85px rgba(0, 0, 0, 0.14), 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.my-btn:hover span:before {
+    transform: scale(0.8);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.14), 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.my-btn .dots-container {
+    opacity: 0;
+    animation: intro 1.6s;
+    animation-fill-mode: forwards;
+}
+
+.my-btn .dot {
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-color: rgba(243, 109, 20, 0.897);
+    border-radius: 100%;
+    position: absolute;
+    transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+}
+
+.my-btn .dot:nth-child(1) {
+    top: 50px;
+    left: 50px;
+    transform: rotate(-140deg);
+    animation: dot1-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.my-btn .dot:nth-child(2) {
+    top: 50px;
+    right: 50px;
+    transform: rotate(140deg);
+    animation: dot2-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.my-btn .dot:nth-child(3) {
+    bottom: 50px;
+    left: 50px;
+    transform: rotate(140deg);
+    animation: dot3-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.my-btn .dot:nth-child(4) {
+    bottom: 50px;
+    right: 50px;
+    transform: rotate(-140deg);
+    animation: dot4-out 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.my-btn:hover .dot:nth-child(1) {
+    animation: dot1 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.my-btn:hover .dot:nth-child(2) {
+    animation: dot2 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.my-btn:hover .dot:nth-child(3) {
+    animation: dot3 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.my-btn:hover .dot:nth-child(4) {
+    animation: dot4 0.3s;
+    animation-fill-mode: forwards;
+}
+
+
+/*define animations*/
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dot1 {
+    0% {
+        top: 50px;
+        left: 50px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        top: 20px;
+        left: 20px;
+        width: 8px;
+        opacity: 1;
+    }
+}
+
+@keyframes dot1-out {
+    0% {
+        top: 20px;
+        left: 20px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        top: 50px;
+        left: 50px;
+        width: 8px;
+        opacity: 0;
+    }
+}
+
+@keyframes dot2 {
+    0% {
+        top: 50px;
+        right: 50px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        top: 20px;
+        right: 20px;
+        width: 8px;
+        opacity: 1;
+    }
+}
+
+@keyframes dot2-out {
+    0% {
+        top: 20px;
+        right: 20px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        top: 50px;
+        right: 50px;
+        width: 8px;
+        opacity: 0;
+    }
+}
+
+@keyframes dot3 {
+    0% {
+        bottom: 50px;
+        left: 50px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 20px;
+        left: 20px;
+        width: 8px;
+        opacity: 1;
+    }
+}
+
+@keyframes dot3-out {
+    0% {
+        bottom: 20px;
+        left: 20px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 50px;
+        left: 50px;
+        width: 8px;
+        opacity: 0;
+    }
+}
+
+@keyframes dot4 {
+    0% {
+        bottom: 50px;
+        right: 50px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 20px;
+        right: 20px;
+        width: 8px;
+        opacity: 1;
+    }
+}
+
+@keyframes dot4-out {
+    0% {
+        bottom: 20px;
+        right: 20px;
+        width: 8px;
+    }
+    50% {
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 50px;
+        right: 50px;
+        width: 8px;
+        opacity: 0;
+    }
+}
+
+#overlay {
+    display: none;
+    opacity: 0.8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #FFF;
+    width: 100%;
+    z-index: 10
+}
+
+#box {
+    display: none;
+    position: fixed;
+    background: white;
+    border-width: thin;
+    border-radius: 15px;
+    width: 500px;
+    z-index: 10;
+}
+
+#box>div {
+    background: #FFF;
+    margin: 8px;
+}
+
+#box>div>#head {
+    background: #292929;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#box>div>#body {
+    background: rgba(209, 208, 208, 0.692);
+    padding: 20px;
+    color: black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#box>div>#foot {
+    background: #292929;
+    padding: 10px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+}
+
+#ok-btn {
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+}
